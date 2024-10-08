@@ -2,18 +2,22 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "5.48.0"
+      version = "5.70.0"
     }
-  }
-  backend "s3" {
-    bucket = "daws78s-remote-state"
-    key    = "expense-dev-acm"
-    region = "us-east-1"
-    dynamodb_table = "daws78s-locking"
   }
 }
 
-#provide authentication here
+
+terraform {
+  backend "s3" {
+    bucket = "workspace-terrafrom"
+    key    = "expense-vpc-dev"
+    region = "us-east-1"
+    dynamodb_table = "workspace-Terraform-1"
+  }
+}
+
 provider "aws" {
   region = "us-east-1"
 }
+
