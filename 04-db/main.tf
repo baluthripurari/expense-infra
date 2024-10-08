@@ -14,7 +14,7 @@ module "db" {
   vpc_security_group_ids = [data.aws_ssm_parameter.db_sg_id.value]  
 
   # DB subnet group
-  db_subnet_group_name = data.aws_ssm_parameter.db_subnet_group_name.value
+  db_subnet_group_name = data.aws_ssm_parameter.Databse_subnet_group_name.value
 
   # DB parameter group
   family = "mysql8.0"

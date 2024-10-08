@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "5.70.0"
     }
   }
@@ -10,9 +10,9 @@ terraform {
 
 terraform {
   backend "s3" {
-    bucket = "workspace-terrafrom"
-    key    = "expense-vpc-dev"
-    region = "us-east-1"
+    bucket         = "workspace-terrafrom"
+    key            = "expense-vpn-dev"
+    region         = "us-east-1"
     dynamodb_table = "workspace-Terraform-1"
   }
 }

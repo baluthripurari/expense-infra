@@ -11,7 +11,7 @@ terraform {
 terraform {
   backend "s3" {
     bucket = "workspace-terrafrom"
-    key    = "expense-vpc-dev"
+    key    = "expense-alb-dev"
     region = "us-east-1"
     dynamodb_table = "workspace-Terraform-1"
   }
